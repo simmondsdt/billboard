@@ -1,0 +1,17 @@
+<h1 class='center'>Billboards</h1>
+<div class='center'>
+<%= link_to 'Add Billboard', new_signboard_path, class:'btn black white-text' %>
+</div>
+
+<p>Name -- Total</p>
+<ul class='collection'>
+  <% @signboards.each do |signboard| %>
+    <li class='collection-item'>
+      <a><%= link_to signboard.name.pluralize, signboard_path(signboard) %></a>
+      <a> Top <%= link_to signboard.total, signboard_path(signboard) %></a>
+      <div class='right'>
+      <a><%= link_to 'Edit', edit_signboard_path(signboard) %></a>
+      </div>
+    </li>
+  <% end %>
+</ul>

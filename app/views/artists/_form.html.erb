@@ -1,0 +1,17 @@
+<div class='container'>
+  <%= form_for [@signboard, @artist] do |f| %>
+    <div class='col m6'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class='col m6'>
+      <%= f.label :genre %>
+      <%= f.text_field :genre %>
+    </div>
+    <div class='col m6'>
+      <%= f.label :rating %>
+      <%= f.number_field :rating, min: 0, max: 10 %>
+    </div>
+    <%= f.submit class: 'btn white black-text' %>
+  <% end %>
+</div>

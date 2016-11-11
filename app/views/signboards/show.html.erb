@@ -1,0 +1,4 @@
+<h1 class='center'> <%= @signboard.name.pluralize %> </h1>
+<h4 class='center'> Top <%= @signboard.total %> </h4>
+
+<h6 class='center'><%= link_to 'Add an Artist', signboard_artists_path(@signboard) %></h6>

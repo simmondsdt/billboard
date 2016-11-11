@@ -1,0 +1,4 @@
+<h1 class='center'><%= @song.title %></h1>
+<h4 class='center'><%= @song.album %> <%= @song.release_date %></h4>
+
+<h6 class='center'><%= link_to 'Artist', signboard_artists_path(@artist, @song) %> </h6>

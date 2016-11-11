@@ -1,0 +1,26 @@
+<h1 class='center'>
+  Songs for <%= @artist.name.pluralize %>
+</h1>
+<div class='center'>
+<%= link_to 'Add Song', new_artist_song_path, class:'btn black white-text' %>
+</div>
+
+<p>Title --  Album -- Release Date</p>
+<ul class='collection'>
+  <% @songs.each do |song| %>
+    <li class='collection-item'>
+      <a>
+        <%= link_to song.title, artist_song_path(@artist, song) %>
+      </a>
+      <a>
+        <%= link_to song.album, artist_song_path(@artist, song) %>
+      </a>
+      <a>
+        <%= link_to song.release_date, artist_song_path(@artist, song) %>
+      </a>
+      <a class='right'>
+        <%= link_to 'Edit', edit_artist_song_path(@artist, song) %>
+      </a>
+    </li>
+  <% end %>
+</ul>

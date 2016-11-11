@@ -1,0 +1,4 @@
+<h1 class='center'> <%= @artist.name %> </h1>
+<h4 class='center'><%= @artist.genre %> <%= @artist.rating %></h4>
+
+<h6 class='center'><%= link_to 'Add a Song', artist_songs_path(@signboard, @artist) %></h6>

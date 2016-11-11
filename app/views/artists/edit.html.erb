@@ -1,0 +1,7 @@
+<h1 class='center'><%= @artist.name.pluralize %> </h1>
+<hr/>
+<%= render 'artists/form' %>
+<br />
+<h6 class='center'>
+  <%= link_to 'Delete', signboard_artist_path(@signboard, @artist) %>
+</h6>

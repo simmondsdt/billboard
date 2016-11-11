@@ -1,0 +1,13 @@
+<div class='container'>
+  <%= form_for @signboard do |f| %>
+    <div class='col m6'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class='col m6'>
+      <%= f.label :total %>
+      <%= f.number_field :total, min: 0, max: 25 %>
+    </div>
+    <%= f.submit class: 'btn white black-text' %>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<h1 class='center'><%= @signboard.name.pluralize %> </h1>
+<h4 class='center'> Top <%= @signboard.total %> </h4>
+<hr />
+<%= render 'signboards/form' %>
+<br />
+<br />
+<h6 class='center'> <%= link_to 'Delete', signboard_path(@signboard) %> </h6>

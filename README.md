@@ -22,3 +22,20 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+models -
+
+signboard
+-name
+-total songs
+
+artist
+-name
+-genre
+-rating
+
+song
+-album
+-title
+-release date

@@ -1,0 +1,26 @@
+<h1 class='center'>
+  Artists for <%= @signboard.name.pluralize %> Top <%= @signboard.total %>
+</h1>
+<div class='center'>
+<%= link_to 'Add Artist', new_signboard_artist_path, class:'btn black white-text' %>
+</div>
+
+<p>Name --  Genre -- Rating</p>
+<ul class='collection'>
+  <% @artists.each do |artist| %>
+    <li class='collection-item'>
+      <a>
+        <%= link_to artist.name, signboard_artist_path(@signboard, artist) %>
+      </a>
+      <a>
+        <%= link_to artist.genre, signboard_artist_path(@signboard, artist) %>
+      </a>
+      <a>
+        <%= link_to artist.rating, signboard_artist_path(@signboard, artist) %>
+      </a>
+      <a class='right'>
+        <%= link_to 'Edit', edit_signboard_artist_path(@signboard, artist) %>
+      </a>
+    </li>
+  <% end %>
+</ul>

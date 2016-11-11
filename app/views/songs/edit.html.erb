@@ -1,0 +1,7 @@
+<h1 class='center'><%= @song.title %> </h1>
+<hr/>
+<%= render 'songs/form' %>
+<br />
+<h6 class='center'>
+  <%= link_to 'Delete', artist_song_path(@artist, @song) %>
+</h6>
